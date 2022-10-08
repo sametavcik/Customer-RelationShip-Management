@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+
+<head>
+	<title>Customer RelationShip Management</title>
+	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.rtl.min.css" integrity="sha384-OXTEbYDqaX2ZY/BOaZV/yFGChYHtrXH2nyXJ372n2Y8abBhrqacCEe+3qhSHtLjy" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+
+<h3>
+Employee Directory
+</h3>
+<hr>
+<a th:href="@{/employees/showFormAdd}" class="btn btn-primary btn-sm mb-3" >Add Employee</a>
+<div>
+		User: <span sec:authentication="principal.username"></span>
+		<br>
+		Role(s): <span sec:authentication="principal.authorities"></span>
+		<br><br>
+	</div>
+
+<hr>
+<table class="table table-bordered table-striped">
+	<thead class="table-dark">
+		<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Action</th>
+		
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr th:each= "tempEmployee : ${theemployees}">
+			
+			<td th:text= "${tempEmployee.firstName}"/>
+			<td th:text= "${tempEmployee.lastName}"/>
+			<td th:text= "${tempEmployee.email}"/>
+			<td>
+			<a th:href="@{/employees/showFromUpdate(employeeId=${tempEmployee.id})}" class="btn btn-warning btn-sm" >Update</a>
+			<a th:href="@{/employees/delete(employeeId=${tempEmployee.id})}" class="btn btn-danger btn-sm" >Delete</a>
+		</tr>
+	</tbody>
+	
+	
+	
+</table>
+
+<form action="#" th:action="@{/logout}" 
+			   method="POST">
+	
+		<input type="submit" value="Logout" class="btn btn-outline-primary mt-2" />
+	
+	</form>
+
+
+
+</div>
+</body>
+
+
+
+
+</html>
