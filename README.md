@@ -53,4 +53,25 @@
 #### Update butonuna tıklandığında servera get request yapılır ve aynı zamanda elemanın id'si servera yollanır. 
 ![Adsız47](https://user-images.githubusercontent.com/65908597/194726700-5687b6bc-c0fe-46f6-a656-89871e0f53ad.png)
 
+#### Link'te görüldüğü gibi id'si 6 olan elemanı parametre olarak servera gönderdik ve otomatik olarak bilgileri doldurulmuş şekilde geldi.
+
+#### Yeni bilgileri girip Save butonuna bastığımızda veriyi servera post ediyoruz ve veri artık güncellenmiş oluyor.
+
+
+![Adsız48](https://user-images.githubusercontent.com/65908597/194726843-25ffac80-16c5-4a8b-84f4-4a7e1f80a839.png)
+
+![Adsız49](https://user-images.githubusercontent.com/65908597/194726847-05d87e5c-4c6b-4b03-87f0-36f24aa889e9.png)
+
+![Adsız50](https://user-images.githubusercontent.com/65908597/194726864-f995cad6-8069-4148-970b-fbab2be34348.png)
+
+
+### 4-) Logout Butonu
+
+#### Kullanıcı logout butonuna basarsa oturumunu başarılı bir şekilde kapatmış olur.                                     
+![Adsız51](https://user-images.githubusercontent.com/65908597/194726910-502cb0a0-2d78-4395-ae30-5f6300696e22.png)               
+![Adsız52](https://user-images.githubusercontent.com/65908597/194726928-47199cb9-4cb7-4f04-9d28-602686b842ef.png)
+
+
+
+
 
